@@ -1,6 +1,8 @@
 ﻿@{
     ViewData["Title"] = "HBT Workspace";
     Layout = null;
+    int inceptionYear = 2026; // Set the inception year of the company
+    int currentYear = DateTime.Now.Year;
 }
 
 <!DOCTYPE html>
@@ -73,7 +75,9 @@
     </div>
 
     <div class="carousel-caption-custom">
-        © 2026 - HBT Workspace. All rights reserved.
+        © @((inceptionYear == currentYear) ? inceptionYear : $"{inceptionYear}-{currentYear}") - HBT Workspace. All
+        rights
+        reserved.
     </div>
 
     <a href="https://wa.me/919172499704" target="_blank" class="whatsapp-float">
